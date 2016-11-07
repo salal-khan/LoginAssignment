@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnclear = (Button) findViewById(R.id.btn_clear);
@@ -36,9 +37,10 @@ public class MainActivity extends AppCompatActivity {
                     tvUser.setText("");
                     if (pass.equals("123")) {
                         tvPass.setText("");
-                        Intent intent = new Intent(getApplicationContext(), Other_Window.class);
+                        Intent intent = new Intent(MainActivity.this, Other_Window.class);
                         intent.putExtra("username", user);
                         startActivity(intent);
+                        overridePendingTransition(R.anim.right_in, R.anim.left_out);
                     } else {
                         tvPass.setText("Wrong password");
                     }

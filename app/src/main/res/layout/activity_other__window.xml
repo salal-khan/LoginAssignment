@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_other__window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/images"
+    tools:context="com.example.salal.loginassignment.Other_Window">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        app:layout_constraintGuide_begin="111dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="111dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/et_toast"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="Toast Message"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:text="Show"
+        android:layout_width="113dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_toast"
+        android:background="@color/white"
+        app:layout_constraintRight_toRightOf="@+id/et_toast"
+        app:layout_constraintLeft_toLeftOf="@+id/et_toast"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_toast" />
+</android.support.constraint.ConstraintLayout>
